@@ -25,22 +25,23 @@ static bool static_key_highlight(effect_params_t* params) {
 
   // all keys: main color (controllable)
   for (uint8_t i = led_min; i < led_max; i++) {
-    rgb_matrix_set_color(i, mainCol.r, mainCol.g, mainCol.b);
+    switch(i) {
+        case 0: // [ESC]
+            rgb_matrix_set_color(i, RGB_RED);
+            break;
+        case 43: // [W]
+        case 62: // [A]
+        case 63: // [S]
+        case 64: // [D]
+        case 99: // [SPACE]
+            rgb_matrix_set_color(i, moveCol.r, moveCol.g, moveCol.b);
+            break;
+        default:
+            rgb_matrix_set_color(i, mainCol.r, mainCol.g, mainCol.b);
+    }
+
   }
-
-  // ESC-key
-  rgb_matrix_set_color(0, RGB_RED);
-
-  // Movement-Keys
-  rgb_matrix_set_color(43, moveCol.r, moveCol.g, moveCol.b); //W
-  rgb_matrix_set_color(62, moveCol.r, moveCol.g, moveCol.b); //A
-  rgb_matrix_set_color(63, moveCol.r, moveCol.g, moveCol.b); //S
-  rgb_matrix_set_color(64, moveCol.r, moveCol.g, moveCol.b); //D
-
-  rgb_matrix_set_color(99, moveCol.r, moveCol.g, moveCol.b); //SPACE
-
   return rgb_matrix_check_finished_leds(led_max);
-
 }
 
 
