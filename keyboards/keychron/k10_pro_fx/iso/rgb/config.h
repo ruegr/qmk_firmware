@@ -37,6 +37,7 @@
 #    define RGB_MATRIX_TURN_OFF_VAL 48
 
 #    define NUM_LOCK_INDEX 37 // NumLock
+#    define CAPS_LOCK_INDEX 61 // CapsLock
 
 #    define LOW_BAT_IND_INDEX 99 // Space
 
