@@ -31,6 +31,7 @@ static bool static_key_highlight(effect_params_t* params) {
         case 63: // [S]
         case 64: // [D]
         case 96: // [CTRL-L]
+        case 78: // [SHIFT-L]
         case 99: // [SPACE]
         case 80: // [Y]
         case 81: // [X]
