@@ -1,5 +1,5 @@
 {
-  "name": "Keychron K10 Pro ISO RGB",
+  "name": "Keychron K10 Pro ISO RGB fx-Edition",
   "vendorId": "0x3434",
   "productId": "0x02A1",
   "keycodes": ["qmk_lighting"],
