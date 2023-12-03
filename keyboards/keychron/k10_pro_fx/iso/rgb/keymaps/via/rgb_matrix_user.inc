@@ -18,14 +18,13 @@ static bool static_key_highlight(effect_params_t* params) {
 
   RGB mainCol = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv);
 
-
-
-  // all keys: main color (controllable)
   for (uint8_t i = led_min; i < led_max; i++) {
     switch(i) {
+        // RED Highlights
         case 0: // [ESC]
             rgb_matrix_set_color(i, RGB_RED);
             break;
+        // Movement Keys
         case 43: // [W]
         case 62: // [A]
         case 63: // [S]
@@ -34,10 +33,10 @@ static bool static_key_highlight(effect_params_t* params) {
         case 99: // [SPACE]
             rgb_matrix_set_color(i, RGB_BLUE);
             break;
+        // all other keys - controllable main color
         default:
             rgb_matrix_set_color(i, mainCol.r, mainCol.g, mainCol.b);
     }
-
   }
   return rgb_matrix_check_finished_leds(led_max);
 }

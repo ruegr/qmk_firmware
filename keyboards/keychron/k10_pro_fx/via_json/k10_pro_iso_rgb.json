@@ -23,10 +23,8 @@
               "options": [
                 ["00. None", 0],
                 ["01. SOLID_COLOR", 1],
-                ["02. REACTIVE_SIMPLE", 2],
-                ["03. REACTIVE_MULTIWIDE", 3],
-                ["04. REACTIVE_MULTINEXUS", 4],
-                ["05. custom1", 5]
+                ["02. REACTIVE_MULTIWIDE", 2],
+                ["03. SOLID GameKeys", 3]
               ]
             },
             {
