@@ -22,6 +22,8 @@ static bool static_key_highlight(effect_params_t* params) {
     switch(i) {
         // RED Highlights
         case 0: // [ESC]
+        case 90:
+        case 95:
             rgb_matrix_set_color(i, RGB_RED);
             break;
 

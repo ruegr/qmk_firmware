@@ -83,7 +83,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
 void keyboard_post_init_user(void) {
   // Call the keymap level matrix init.
-    rgb_matrix_enable_noeeprom();
-    rgb_matrix_sethsv_noeeprom(0, 0, 127);
-    rgb_matrix_mode_noeeprom(RGB_MATRIX_CUSTOM_static_key_highlight);
+    rgb_matrix_enable();
+    rgb_matrix_sethsv(0, 0, 127);
+    rgb_matrix_mode(RGB_MATRIX_CUSTOM_static_key_highlight);
 }
