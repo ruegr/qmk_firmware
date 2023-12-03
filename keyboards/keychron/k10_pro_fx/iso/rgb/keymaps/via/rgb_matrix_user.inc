@@ -22,8 +22,6 @@ static bool static_key_highlight(effect_params_t* params) {
     switch(i) {
         // RED Highlights
         case 0: // [ESC]
-        case 90:
-        case 95:
             rgb_matrix_set_color(i, RGB_RED);
             break;
 
@@ -34,20 +32,28 @@ static bool static_key_highlight(effect_params_t* params) {
         case 64: // [D]
         case 96: // [CTRL-L]
         case 99: // [SPACE]
-        // Missing: [X], [Y]
+        case 80: // [Y]
+        case 81: // [X]
             rgb_matrix_set_color(i, RGB_BLUE);
             break;
 
         // Interaction keys
-        // Missing [M], [N], [T]
         case 41: // [TAB]
-        case 42: // [Q]
         case 44: // [E]
+        case 46: // [T]
+        case 85: // [N]
+        case 86: // [M]
             rgb_matrix_set_color(i, RGB_GREEN);
             break;
 
         // communication keys
-        // Missing [ENTER], [H], [C], [Q], [ALT]
+        case 74: // [ENTER]
+        case 98: // [ALT-L]
+        case 67: // [H]
+        case 82: // [C]
+        case 42: // [Q]
+            rgb_matrix_set_color(i, RGB_TEAL);
+            break;
 
         // Weapon Keys
         case 21: // [1]
@@ -57,7 +63,7 @@ static bool static_key_highlight(effect_params_t* params) {
         case 45: // [R]
         case 65: // [F]
         case 66: // [G]
-        // Missing [V]
+        case 83: // [V]
             rgb_matrix_set_color(i, RGB_ORANGE);
             break;
 
