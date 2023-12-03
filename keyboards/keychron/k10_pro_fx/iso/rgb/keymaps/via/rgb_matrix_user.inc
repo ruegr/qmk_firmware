@@ -11,7 +11,7 @@ RGB_MATRIX_EFFECT(static_key_highlight)
 
 // e.g: A simple effect, self-contained within a single method
 static bool static_key_highlight(effect_params_t* params) {
-  
+
 
 
   RGB_MATRIX_USE_LIMITS(led_min, led_max);
@@ -27,10 +27,10 @@ static bool static_key_highlight(effect_params_t* params) {
   for (uint8_t i = led_min; i < led_max; i++) {
     rgb_matrix_set_color(i, mainCol.r, mainCol.g, mainCol.b);
   }
-  
+
   // ESC-key
   rgb_matrix_set_color(0, RGB_RED);
-                                      
+
   // Movement-Keys
   rgb_matrix_set_color(43, moveCol.r, moveCol.g, moveCol.b); //W
   rgb_matrix_set_color(62, moveCol.r, moveCol.g, moveCol.b); //A
