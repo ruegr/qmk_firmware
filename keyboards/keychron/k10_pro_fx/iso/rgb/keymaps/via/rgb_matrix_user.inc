@@ -17,10 +17,7 @@ static bool static_key_highlight(effect_params_t* params) {
   RGB_MATRIX_USE_LIMITS(led_min, led_max);
 
   RGB mainCol = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv);
-  RGB moveCol;
-  moveCol.r = 0x00;
-  moveCol.g = 0x00;
-  moveCol.b = 0xff;
+
 
 
   // all keys: main color (controllable)
@@ -33,8 +30,9 @@ static bool static_key_highlight(effect_params_t* params) {
         case 62: // [A]
         case 63: // [S]
         case 64: // [D]
+        case 96: // [CTRL-L]
         case 99: // [SPACE]
-            rgb_matrix_set_color(i, moveCol.r, moveCol.g, moveCol.b);
+            rgb_matrix_set_color(i, RGB_BLUE);
             break;
         default:
             rgb_matrix_set_color(i, mainCol.r, mainCol.g, mainCol.b);
