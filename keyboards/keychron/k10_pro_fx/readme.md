@@ -8,6 +8,12 @@ A customizable 108 keys keyboard.
 * Hardware Supported: Keychron K10 Pro
 * Hardware Availability: [Keychron K10 Pro QMK/VIA Wireless Mechanical Keyboard](https://www.keychron.com/collections/keychron-k-pro-series-keyboard/products/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard)
 
+## build
+
+    cd qmk_firmware/keyboards/keychron/k10_pro_fx/iso/rgb/keymaps/via
+    qmk compile
+
+*original build-instructions*
 Make example for this keyboard (after setting up your build environment):
 
     make keychron/k10_pro/iso/rgb:via
@@ -16,6 +22,7 @@ Flashing example for this keyboard:
 
     make keychron/k10_pro/iso/rgb:via:flash
 
+## bootloader / flash-mode
 
 **Reset Key**: Connect the USB cable, toggle mode switch to "Off", **hold down the *Esc* key** or reset button underneath space bar, then toggle then switch to "Cable".
 
